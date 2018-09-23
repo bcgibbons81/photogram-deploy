@@ -1,0 +1,27 @@
+<div class="posts-wrapper row">
+  <div class="post">
+    <div class="post-head">
+      <div class="name">
+        <%= @post.user.user_name %>
+      </div>
+    </div>
+    <div class="image center-block">
+      <%= image_tag @post.image.url %>
+    </div>
+    <p class="caption">
+      <%= @post.caption %>
+    </p>
+    <div class="text-center">
+      <% if @post.user.id == current_user.id %>
+  <div class="text-center edit-links">
+    <%= link_to "Cancel", root_path %>
+    |
+    <%= link_to "Edit Post", edit_post_path(@post) %>
+    <% else %>
+  <div class="text-center edit-links">
+    <%= link_to "Back", root_path(@post) %>
+  </div>
+<% end %>
+    </div>
+  </div>
+</div>

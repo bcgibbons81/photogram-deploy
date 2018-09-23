@@ -1,0 +1,9 @@
+<% Photogram %>
+
+<% @posts.each do |post| %>
+  <%= render 'post', post: post %>
+<% end %>
+
+
+<%= link_to "New Post", new_post_path %>
+<%= link_to 'Click here to log out.', logout_path %>
