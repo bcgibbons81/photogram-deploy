@@ -25,16 +25,16 @@ end
 
 
 # Seed posts
-post = {}
-user_ids = []
-User.all.each { |user| user_ids << user.id }
+# post = {}
+# user_ids = []
+# User.all.each { |user| user_ids << user.id }
 
-ActiveRecord::Base.transaction do
-	50.times do 
-		post['caption'] = Faker::Hipster.sentence(1).gsub(".", "")
-		post['user_id'] = user_ids.sample
-		post['image'] = Faker::LoremPixel.image
+# ActiveRecord::Base.transaction do
+# 	50.times do 
+# 		post['caption'] = Faker::Hipster.sentence(1).gsub(".", "")
+# 		post['user_id'] = user_ids.sample
+# 		post['image'] = Faker::LoremPixel.image
 		
-		Post.create!(post)
-	end
-end
+# 		Post.create!(post)
+# 	end
+# end
