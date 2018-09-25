@@ -41,6 +41,11 @@ gem 'bootstrap', '~> 4.1', '>= 4.1.3'
 gem 'popper_js', '~> 1.14', '>= 1.14.3'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'binding_of_caller', '~> 0.8.0'
+gem 'pg_search', '~> 2.1', '>= 2.1.2'
+gem 'high_voltage'
+gem "mini_magick"
+gem 'figaro', '~> 1.1', '>= 1.1.1'
+gem 'faker', '~> 1.9', '>= 1.9.1'
 
 
 group :development, :test do

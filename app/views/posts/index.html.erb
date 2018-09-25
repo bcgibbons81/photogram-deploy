@@ -1,4 +1,12 @@
-<% Photogram %>
+
+
+<% if current_user.god? %>
+  <h3>Welcome, God.</h3>
+<% elsif current_user.admin? %>
+  <h3>Welcome, Admin.</h3>
+<% else %>
+  <h3>Welcome</h3>
+<% end %>
 
 <% @posts.each do |post| %>
   <%= render 'post', post: post %>
